@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Character Builder</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <h1>Language Suggester</h1>
+
+    <h2>Hey you! You wanna learn how to code?</h2>
+    <h3>Well you came to the right place!</h3>
+    <form id="questions">
+        <h2>Let's Start off with a few simple questions.</h2>
+
+        <h3>What is your name?</h3>
+        <label for="nameInput"></label>
+        <input id="nameInput" type="text" name="nameInput">
+
+        <h3>Second, do you like to be in the front of the line or the back of the line?</h3>
+        <label>
+            <input type="radio" name="frontBack" value="front">
+            Front
+        </label>
+        <label>
+            <input type="radio" name="frontBack" value="back">
+            Back
+        </label>
+
+        <h3>Next, what is your favorite English parts of speech</h3>
+        <label>
+            <input type="radio" name="partSpeech" value="noun">
+            Noun
+        </label>
+        <label>
+            <input type="radio" name="partSpeech" value="adjective">
+            Adjective
+        </label>
+        <label>
+            <input type="radio" name="partSpeech" value="verb">
+            Verb
+        </label>
+
+        <h3>If you were to pick a number between 1 and 10, what number would you pick?</h3>
+        <label for="numberInput"></label>
+        <input id="numberInput" type="text" name="numberInput">
+
+        <h3>Lastly, how much coding experience do you have? What title would you give yourself?</h3>
+        <label>
+            <input type="radio" name="experience" value="beginner">
+            Beginner (0-2 years)
+        </label>
+        <label>
+            <input type="radio" name="experience" value="intermediate">
+            Intermediate (2-3 years)
+        </label>
+        <label>
+            <input type="radio" name="experience" value="expert">
+            Expert (4+ years)
+        </label>
+
+        <div id="result" class="hidden">
+            <h2>Here is my language suggestion for you <span id="survey">____</span>!</h2>
+            <h3>According to your answers, you should consider:
+                <p id="output"></p>
+            </h3>
+        </div>
+    </form>
+</body>
+
+</html>
