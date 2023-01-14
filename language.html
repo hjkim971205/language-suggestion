@@ -48,23 +48,18 @@
         <input id="numberInput" type="text" name="numberInput">
 
         <h3>Lastly, how much coding experience do you have? What title would you give yourself?</h3>
-        <label>
-            <input type="radio" name="experience" value="beginner">
-            Beginner (0-2 years)
-        </label>
-        <label>
-            <input type="radio" name="experience" value="intermediate">
-            Intermediate (2-3 years)
-        </label>
-        <label>
-            <input type="radio" name="experience" value="expert">
-            Expert (4+ years)
-        </label>
+        <select id="experience">
+            <option value="1">Beginner (0-2 years)</option>
+            <option value="2">Intermediate (2-3 years)</option>
+            <option value="3">Expert (4+ years)</option>
+        </select>
+        <button type="submit" class="btn">Show me the results!</button>
 
         <div id="result" class="hidden">
             <h2>Here is my language suggestion for you <span id="survey">____</span>!</h2>
             <h3>According to your answers, you should consider:
-                <p id="output"></p>
+                <p id="output1a"></p>
+                <p>So go try out  <span id="output1b"></span> for <span id="time"></span> day(s)!</p>
             </h3>
         </div>
     </form>
