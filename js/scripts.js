@@ -6,6 +6,7 @@ function suggestLanguage(event) {
     let potential1;
     let potential2;
     let potential3;
+    let potential4;
     const frontBack = document.querySelector("input[name='frontBack']:checked").value;
     if (frontBack === "front") {
         potential1 = "frontEnd";
@@ -26,10 +27,19 @@ function suggestLanguage(event) {
     if (numberInput <5) {
         potential3 = " lessthan";
     } else {
-        potential3 = " greaterthan"
+        potential3 = " greaterthan";
     }
 
-    document.getElementById("output").innerText = potential1 + potential2 + potential3;
+    const experience = document.getElementById("experience").value;
+    if (experience === "1") {
+        potential4 = " beginner";
+    } else if (experience === "2") {
+        potential4 = " intermediate";
+    } else {
+        potential4 = " expert";
+    }
+
+    document.getElementById("output").innerText = potential1 + potential2 + potential3 + potential4;
 }
 
 window.addEventListener("load", function () {
