@@ -100,6 +100,9 @@ function suggestLanguage(event) {
         }
     }
 
+    if (options = undefined) {
+        window.alert("Please fill out missing area!");
+    } 
 
     document.getElementById("output1a").innerText = options;
     document.getElementById("output1b").innerText = options;
