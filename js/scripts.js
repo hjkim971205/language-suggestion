@@ -30,7 +30,7 @@ function suggestLanguage(event) {
     } else {
         potential3 = "greaterthan";
     }
-
+*/
     const experience = document.getElementById("experience").value;
     if (experience === "1") {
         potential4 = "beginner";
@@ -39,16 +39,36 @@ function suggestLanguage(event) {
     } else {
         potential4 = "expert";
     }
-*/
+
     if (potential1 === "frontEnd"){
-        options = "HTML, VUE, Javascript, React, CSS, jQuery, Angular, Swift";
+        //options = "HTML, VUE, Javascript, React, CSS, jQuery, Angular, Swift, R";
         if (potential2 === "noun") {
-            options = "HTML, VUE, Javascript";
-            if ()
+            //options = "HTML, VUE, Javascript";
+            if (potential4 === "beginner"){
+                options = "HTML";
+            } else if (potential4 === "intermediate") {
+                options = "javascript";
+            } else {
+                options = "VUE";
+            }
         } else if (potential2 === "adjective") {
-            options = "React, CSS, jQuery";
+            //options = "React, CSS, jQuery";
+            if (potential4 === "beginner"){
+                options = "CSS";
+            } else if (potential4 === "intermediate") {
+                options = "React";
+            } else {
+                options = "jQuery";
+            }
         } else {
-            options = "Angular, Swift";
+            //options = "Angular, Swift, R";
+            if (potential4 === "1"){
+                options = "Angular";
+            } else if (potential4 === "2") {
+                options = "Swift";
+            } else {
+                options = "R";
+            }
         }
     }
     
