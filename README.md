@@ -30,7 +30,7 @@ This browser application give the user a suggestion on which coding language the
 * Clone this repository to desktop
 * Navigate to the top level of directory
 * open language.html in your browser
-* within the index.html fill in the fields to receive a suggestion at the end.
+* within the language.html fill in the fields to receive a suggestion at the end.
 
 ## Known Bugs
 
