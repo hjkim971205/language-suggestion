@@ -5,9 +5,9 @@ function suggestLanguage(event) {
 
     let potential1;
     let potential2;
-    let potential3;
     let potential4;
     let options;
+    
     const frontBack = document.querySelector("input[name='frontBack']:checked").value;
     if (frontBack === "front") {
         potential1 = "frontEnd";
@@ -23,14 +23,10 @@ function suggestLanguage(event) {
     } else {
         potential2 = "verb";
     }
-/*
+
     const numberInput = parseInt(document.querySelector("input#numberInput").value);
-    if (numberInput <5) {
-        potential3 = "lessthan";
-    } else {
-        potential3 = "greaterthan";
-    }
-*/
+    document.querySelector("span#time").innerText = numberInput;
+
     const experience = document.getElementById("experience").value;
     if (experience === "1") {
         potential4 = "beginner";
@@ -73,18 +69,40 @@ function suggestLanguage(event) {
     }
     
     if (potential1 === "backEnd") {
-        options = "C#, Java, PHP, Go, Python, Ruby, SQL";
+        //options = "C#, Java, PHP, Go, Python, Ruby, SQL";
         if (potential2 === "noun") {
-            options = "C#, Java, PHP";
+            //options = "C#, Java, PHP";
+            if (potential4 === "beginner"){
+                options = "Java";
+            } else if (potential4 === "intermediate") {
+                options = "PHP";
+            } else {
+                options = "C#";
+            }
         } else if (potential2 === "adjective") {
-            options = "Go, Python";
+            //options = "Go, Python, Rust";
+            if (potential4 === "beginner"){
+                options = "Python";
+            } else if (potential4 === "intermediate") {
+                options = "Go";
+            } else {
+                options = "Rust";
+            }
         } else {
-            options = "Ruby, SQL";
+            //options = "Ruby, SQL, NodeJS";
+            if (potential4 === "beginner"){
+                options = "Ruby";
+            } else if (potential4 === "intermediate") {
+                options = "SQL";
+            } else {
+                options = "NodeJS";
+            }
         }
     }
 
 
-    document.getElementById("output").innerText = options;
+    document.getElementById("output1a").innerText = options;
+    document.getElementById("output1b").innerText = options;
 }
 
 window.addEventListener("load", function () {
