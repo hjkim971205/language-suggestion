@@ -5,7 +5,7 @@ function suggestLanguage(event) {
 
     let potential1;
     let potential2;
-    let backEnd;
+    let potential3;
     const frontBack = document.querySelector("input[name='frontBack']:checked").value;
     if (frontBack === "front") {
         potential1 = "frontEnd";
@@ -15,13 +15,21 @@ function suggestLanguage(event) {
 
     const partSpeech = document.querySelector("input[name='partSpeech']:checked").value;
     if (partSpeech === "noun") {
-        potential2 = "noun";
+        potential2 = " noun";
     } else if (partSpeech === "adjective") { 
-        potential2 = "adjective"; 
+        potential2 = " adjective"; 
     } else {
-        potential2 = "verb"
+        potential2 = " verb";
     }
-    document.getElementById("output").innerText = potential1 + potential2;
+
+    const numberInput = parseInt(document.querySelector("input#numberInput").value);
+    if (numberInput <5) {
+        potential3 = " lessthan";
+    } else {
+        potential3 = " greaterthan"
+    }
+
+    document.getElementById("output").innerText = potential1 + potential2 + potential3;
 }
 
 window.addEventListener("load", function () {
