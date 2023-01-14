@@ -7,7 +7,7 @@ function suggestLanguage(event) {
     let potential2;
     let potential4;
     let options;
-    
+
     const frontBack = document.querySelector("input[name='frontBack']:checked").value;
     if (frontBack === "front") {
         potential1 = "frontEnd";
@@ -103,6 +103,7 @@ function suggestLanguage(event) {
 
     document.getElementById("output1a").innerText = options;
     document.getElementById("output1b").innerText = options;
+    document.querySelector("div#result").removeAttribute("class");
 }
 
 window.addEventListener("load", function () {
